@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/mainapp/webapp/templatescss/Sidebar.css">
+<!-- <link rel="stylesheet" href="/mainapp/webapp/templatescss/Sidebar.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 <nav>
     <a href="#first"><i class="fa-solid fa-film"></i></a>
@@ -23,4 +23,48 @@
   <section id= 'fourth'>
     <h1>Fourth</h1>
    </section>
- </div>
+ </div> -->
+
+
+ <!DOCTYPE html> 
+<html>
+    <head>
+        <title>CinePro-Usuario</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/mainapp/webapp/templatescss/sidebarhorizontal.css">
+        <link rel="stylesheet" href="/mainapp/webapp/templatescss/principal.css">
+        <link rel="icon"  type="image/png" sizes="25×25" href="./images/carrete.png">
+</head>
+<body>
+	<header id="header">
+        <nav class="links" style="--items: 4;">
+            <a rel="stylesheet" href="/mainapp/webapp/templates/inicio.html">INICIO</a>
+            <a rel="stylesheet" href="/mainapp/webapp/templates/principal.html">PRINCIPAL</a>
+            <a rel="stylesheet" href="/mainapp/webapp/templates/compra.html">COMPRA</a>
+            <a rel="stylesheet" href="/mainapp/webapp/templates/rentas.html">RENTAS EN LINEA</a>
+            <span class="line"></span>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <strong>Pros</strong>
+        <ul>
+            <li>It's pure CSS.</li>
+        </ul>
+        <strong>Cons</strong>
+        <ul>
+            <li>It's pure CSS.</li>
+            <li>All links need to have a consistent dimensions for this to work</li>
+            <li>You have to set everything up yourself in terms of telling the nav how many items there are and where the <code>.line</code> should move to whenever one of the links gets hovered.</li>
+    
+        </ul>
+        <strong>Notes</strong>
+        <ul>
+            <li>This uses Custom Properties, Calc, and Grid.</li>
+            <li>While I couldn't find an easier way to make the line work with unevenly sized links, I tried my best to compensate for it by including the <code>--width</code> and <code>--left</code> custom properties, both of which would take priority over the current setup should either be defined.</li>
+        </ul>
+    </div>
+</body>
+</html>
