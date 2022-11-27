@@ -11,6 +11,68 @@ html {
 }
 .container {
 	padding-bottom: 3rem;
+	display: flex;
+	position:absolute;
+	
+}
+.titulo{
+	text-align: center;
+	text-transform: capitalize;
+	line-height: 100%;
+	font-size: larger;
+	color: goldenrod;
+}
+.titulos{
+	text-align: center;
+	text-transform: capitalize;
+	line-height: 100%;
+	font-size: larger;
+	color: goldenrod;
+}
+#noticias{
+	
+	left: 400px;
+	top: 8%;
+}
+#noticias1{
+	left: 400px;
+	top: 20%;
+}
+#noticias2{
+	left: 400px;
+	top: 32%;
+}
+#noticias3{
+	left: 400px;
+	top: 42%;
+}
+#noticias4{
+	left: 400px;
+	top: 54%;
+}
+#noticias5{
+	left: 400px;
+	top: 65%;
+}
+#noticias6{
+	left: 400px;
+	top: 76%;
+}
+#noticias7{
+	left: 400px;
+	top: 88%;
+}
+#noticiasR1{
+	left: 400px;
+	top: 12%;
+}
+#noticiasR2{
+	left: 400px;
+	top: 45%;
+}
+#noticiasR3{
+	left: 400px;
+	top: 75%;
 }
 img {
 	-webkit-box-reflect: below 5px
@@ -76,5 +138,6 @@ button {
 	.column.is-one-quarter img {
 		width: 100%;
 		margin-bottom: 7rem;
+		margin-top:50px;
 	}
 }

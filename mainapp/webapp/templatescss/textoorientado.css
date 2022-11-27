@@ -1,0 +1,9 @@
+div.noticia {
+    width: 900px;
+    margin: 10px auto;
+    background-color: #345;
+    color: #fff;
+    padding: 20px;
+    text-align: justify;
+    
+}

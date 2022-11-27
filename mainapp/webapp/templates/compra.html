@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/mainapp/webapp/templatescss/sidebarhorizontal.css">
     <link rel="stylesheet" href="/mainapp/webapp/templatescss/principal.css">
     <link rel="icon"  type="image/png" sizes="25×25" href="./images/carrete.png">
+    
 </head>
 <header id="header" !important>
     <nav class="links" style="--items: 4;">
@@ -17,7 +18,7 @@
         <span class="line"></span>
     </nav>
 </header>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <!DOCTYPE html>
 <html>
   <head>
@@ -36,7 +37,8 @@
           <h1>BOLETOS</h1>
           <form action="/">
             <div class="info">
-              <input type="text" name="name" placeholder="SALA">
+              
+              
               <select>
                 <option value="number" disabled selected>Elige una Pelicula</option>
                 <option value="10">Avengers</option>
@@ -45,16 +47,9 @@
                 <option value="40">Cars</option>
                 <option value="50">Nemo</option>
               </select>
-              <select>
-                <option value="number" disabled selected>Cantidad de boletos</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-              <select>
-                <option value="time" disabled selected>Elige Funcion</option>
+
+              <select id="hora">
+                <option value="time" selected>Elige Funcion</option>
                 <option value="8">8:00am</option>
                 <option value="9">9:00am</option>
                 <option value="10">10:00am</option>
@@ -63,11 +58,84 @@
                 <option value="3">3:00pm</option>
                 <option value="6">6:00pm</option>
                 <option value="7">7:00pm</option>
-              </select>
-              <input type="text" name="name" placeholder="COSTO">
+            </select>
+
+
+            <input type="text" name="sala" placeholder="SALA" id="sala" value="" >
+              <select id="cantidad">
+                <option selected>Cantidad Boletos</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+              =
+              <input type="text" name="costo" id="resultado" placeholder="COSTO">
+
+              
+              
+              
+              
             </div>
             <br>
             <button href="/" class="button">COMPRAR</button>
+
+            <script>
+              $("#hora").change(function() {
+                var valor = $(this).val(); // Capturamos el valor del select
+                var texto = $(this).find('option:selected').text(); // Capturamos el texto del option seleccionado
+
+                $("#sala").val(valor);
+                $("#sala").val(texto);
+                if ( texto == "Elige Funcion"){
+                  texto1 = "Elige una Funcion"
+                  $("#sala").val(texto1) 
+                }
+                if ( texto == "8:00am"){
+                  texto1 = "SALA C"
+                  $("#sala").val(texto1) 
+                }else if ( texto == "9:00am"){
+                  texto1 = "SALA A"
+                  $("#sala").val(texto1) 
+                }else if ( texto == "10:00am"){
+                  texto1 = "SALA B"
+                  $("#sala").val(texto1) 
+                }else if ( texto == "1:00pm"){
+                  texto1 = "SALA D"
+                  $("#sala").val(texto1) 
+                }else if ( texto == "12:00pm"){
+                  texto1 = "SALA E"
+                  $("#sala").val(texto1) 
+                }else if ( texto == "6:00pm"){
+                  texto1 = "SALA A"
+                  $("#sala").val(texto1) 
+                }else if ( texto == "3:00pm"){
+                  texto1 = "SALA C"
+                  $("#sala").val(texto1) 
+                }else if ( texto == "7:00pm"){
+                  texto1 = "SALA B"
+                  $("#sala").val(texto1) 
+                }
+              });
+              
+
+              $("#cantidad").change(function() {
+                
+                var cantidad = $(this).find('option:selected').text(); // Capturamos el valor del select
+                cantidad = 60*cantidad
+                $("#resultado").val(cantidad);
+              
+
+              
+              })
+
+              $("#sala").attr("disabled", "disabled");
+              $("#resultado").attr("disabled", "disabled");
+            </script>
           </form>
         </div>
       </body>
