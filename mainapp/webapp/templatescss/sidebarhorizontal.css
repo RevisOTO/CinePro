@@ -97,6 +97,12 @@ code {
 	pointer-events: none;
 }
 
+table, th, td {
+	  border: 1px solid;
+	border-style: solid;
+	width:100%;
+	}
+
 /* The Magic */
 #header {
 	position: fixed;
