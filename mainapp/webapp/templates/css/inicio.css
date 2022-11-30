@@ -1,110 +1,40 @@
-*
-{box-sizing: border-box;
- margin:0;
- border:0;
- font-family: 'Lato', sans-serif;
- color: black;
-}
 
-img{
-    width: 70%;
-}
+@import url('https://fonts.cdnfonts.com/css/google-sans');
 
+body{
+    background-color: grey;
+}
+.contenedor{
+    display: flex;
+}
+#posicionboton{
+    left: 900px;
+    margin-top: 100px;
+    position: absolute;
+}
 #logo{
-    width: 12%;
-    object-fit: cover;
+    width: 300px;
+    margin-left: 520px;
+    
 }
-
-.contenedor
-{
-    width: 100vw;
-    height: 100vh;
-    background-image:url(../images/fondo.jpg);
-    background-size:cover;
-    background-position: center;
-	background-repeat:no-repeat;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 20% 60% 20%;
-    grid-template-areas: 'header header header header'
-                        'section1  section1 section2 section2'
-                        'footer footer footer footer';
-    justify-content: center;
-    align-content: center;
-}
-
-
-
-.caja
-{
-
-    background-color: rgba(0, 21, 78, 0.733);
-    text-align:end;
-    border-style: solid;
-    border-color: rgba(255, 255, 255, 0);
-    border-width: 5px;
+#Anuncio{
+    margin-left: 8px;
+    color:goldenrod;
+    font-family: 'Product Sans Black', sans-serif;
+    font-size: 25px;
     text-align:center;
-    color: rgb(255, 44, 44);
-    text-shadow: 1px 1px 2px rgb(0, 0, 0);
-    
-
+    background-image: url("/mainapp/webapp/templates/images/claqueta.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    width: 500px;
+    height: 600px;
 }
-
-a{
-    color: rgb(115, 159, 255);
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    font-size: 200%;
-}
-
-a:hover img{
-    opacity: 50%;
-    
-}
-a:hover{
-    color: rgb(255, 255, 255);
-}
-
-
-#header{
-    grid-area: header;
-    font-size: 100%;
-}
-
-#section1{
-    grid-area: section1;
-}
-#section2{
-    grid-area: section2;
-}
-#section3{
-    grid-area: section3;
-}
-
-
 #footer{
-    grid-area: footer;
+    text-align: center;
+    color:white;
+    font-family: 'Product Sans Black', sans-serif;
+    position: absolute;
+    bottom: 0px;
+    background-color:#9fa3a9;
+    width:100%;
 }
-@media screen and (max-width: 1200px) 
-{
-    a{
-       font-size: 120%;
-    }
-    #header{
-        font-size: 250%;
-    }
-    #logo{
-        width: 16%;
-    }
-} 
-@media screen and (max-width: 800px) 
-{
-    a{
-       font-size: 100%;
-    }
-    #header{
-        font-size: 175%;
-    }
-    #logo{
-        width: 16%;
-    }
-} 
